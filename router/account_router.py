@@ -6,7 +6,7 @@ from utils.cookie_manager import get_login_token
 router = APIRouter(prefix="/auth", tags=["/auth"])
 
 @router.post("/preregister")
-def preregister(request: PreregisterRequest, service: AccountService = Depends()):
+def preregister(request: PreregisterRequest, service: AccountService = Depends())
     return service.preregister(request=request)
 
 @router.get("/preverify")
